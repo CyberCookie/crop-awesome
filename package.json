@@ -1,6 +1,6 @@
 {
   "name": "crop-awesome",
-  "version": "0.9.11",
+  "version": "0.9.12",
   "description": "Font Awesome kind of minifier. Crop Font Awesome files making your css bundle and fonts much smaller",
   "keywords": "CSS, bundle, font, font awesome, crop, font-awesome, awesome, minify",
   "homepage": "https://github.com/CyberCookie/crop-awesome",
@@ -11,12 +11,10 @@
   },
   "licence": "MIT",
   "main": "index.js",
+  "bin": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/CyberCookie/crop-awesome"
-  },
-  "bin": {
-    "crop-awesome": "./index.js"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
