@@ -15,7 +15,9 @@
     "type": "git",
     "url": "https://github.com/CyberCookie/crop-awesome"
   },
-  "bin": "./index.js",
+  "bin": {
+    "crop-awesome": "./index.js"
+  },
   "dependencies": {
     "font-awesome": "^4.7.0",
     "svg2ttf": "^4.1.0",
