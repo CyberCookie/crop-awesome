@@ -93,7 +93,7 @@ if (!module.parent) {
             main(answers);
 
             fs.writeFile(_helper._paths.prompt_cache, JSON.stringify(promptCache), err => {
-                err && _helper.log.e(err)
+                err ? _helper.log.e(err) : process.exit(2)
             })
         })
     }

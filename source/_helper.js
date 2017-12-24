@@ -88,15 +88,14 @@ function validateConfig(cfg) {
 function prompt(cfg, cb, i=0, res={}) {
     if (i < DIALOG.length) {
         const { key, question, transform } = DIALOG[i],
-            cachedAnswer = prompt_cache[key],
+            cachedAnswer = prompt_cache[key] || '',
             formattedQuestion = [
                 `\n${c_reset}`,
                 question,
                 cachedAnswer && `\n${c_dialog_info}Press Tab to paste cached - ${cachedAnswer}${c_reset}`,
                 `\n${c_dialog_answer}`
             ].join(''),
-
-        rl = readline.createInterface(stdin, stdout, line => [[cachedAnswer || ''], line]);
+        rl = readline.createInterface(stdin, stdout, line => [[cachedAnswer], line]);
 
         rl.question(formattedQuestion, answer => {
             rl.close();
