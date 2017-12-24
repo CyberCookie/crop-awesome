@@ -2,16 +2,20 @@
 This package is the simplest way to crop Font Awesome fonts and css files as to make them much smaller, removing unneeded icons and classes from CSS file and glyphs from font files. You can  use crop-awesome in many ways because of it flexibility.
 
 First let's make an install having executed one of the command below in your terminal.
-`npm install crop-awesome` You can install it globally using `-g` flag as well
-or
-`git clone https://github.com/CyberCookie/crop-awesome`
+
+`npm install crop-awesome` You can install it globally using `-g` flag as well</br>
+or</br>
+`git clone https://github.com/CyberCookie/crop-awesome`</br>
 
 Crop-awesome installed globally or installed via git uses params and terminal prompt as to construct your config when crop-awesome installed as a package dependency uses passed in object that merges with the default config.
 #### Tool execution params
 
 `--no-log` - turns off info logs
+
 `-css-dest=` - relative css destination
+
 `-font-dest=` - relative destination for the font files
+
 `-cfg-path=` - relative path to an extrnal config file. File must be have _json_ or _js_ format
 
 #### Package default config

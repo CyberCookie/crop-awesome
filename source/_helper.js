@@ -24,7 +24,7 @@ const readline = require('readline'),
     cwd = process.cwd(),
 
     font_awesome_version = pkg.dependencies['font-awesome'],
-    font_awesome_path = join(__dirname, `${pkg._resolved ? '..' : ''}`, '..', 'node_modules', 'font-awesome'),
+    font_awesome_path = join(__dirname, '..', `${pkg._resolved ? '..' : 'node_modules'}`, 'font-awesome'),
 
     _paths = {
         font_awesome_svg: join(font_awesome_path, 'fonts', 'fontawesome-webfont.svg'),
