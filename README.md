@@ -1,5 +1,5 @@
 # Crop-awesome
-This package is the simplest way to crop Font Awesome fonts and css files as to make them much smaller, removing unneeded icons and classes from CSS file and glyphs from font files. You can  use crop-awesome in many ways because of it flexibility.
+If you are familiar with [Font Awesome](http://fontawesome.io/), you may find this package extremely usefull for you :) Crop awesome is a simplest way to crop fonts and css files as to make them much smaller, removing unneeded icons and classes from CSS file and glyphs from font files. You can  use crop-awesome in many ways because of it flexibility, we are going to go through all of them :)
 
 First let's make an install having executed one of the command below in your terminal.
 
@@ -46,32 +46,31 @@ Crop-awesome installed globally or installed via git uses params and terminal pr
 `help_classes` - helper classes such as _2x_, _border_ and so on. I've included the most usefull classes in default set. It includes _lg_, _2x_, _3x_, _4x_, _5x_, _fw_, _border_
 
 #### Examples
-````js
-crop-awesome -css-dest=./my_cropped.css -font-dest=./fonts/
-````
-In exampe above we see the params that set destination to CSS and font files (-css-dest, -font-dest).
-In case you omit the params - package get missed properties from the _default config_.
+`crop-awesome -css-dest=./my_cropped.css -font-dest=./fonts/`
+In example above we see the params that set destination to CSS and font files (-css-dest, -font-dest).
+In case you omit a params - package get missed properties from the _default config_,
+This way of usasge also includes terminal propmt questions in order to build user config. Your answers stores in package therefore you can "autocomplete" them next time.
+> So far autocomplete doesn't work in global module
 
+</br>
 Here we have the case with external config file:
-````js
-crop-awesome -cfg-path=../../config.js
-````
+`crop-awesome -cfg-path=../../config.js`
 It's important to have `crop_awesome_cfg` on the root level in your external config as not to polute it.
 
 This is an example of how crop-awesome works being a package dependency
 ```javascript
 const fs = require('fs'),
-	crop = require('crop-awesome');
+    crop = require('crop-awesome');
 
 crop({
-	font_types: ['woff2'],
-	output_path: './lol.css',
-	icons: ['glass', 'space', 'infinity', 'taxi']
+    font_types: ['woff2'],
+    output_path: './lol.css',
+    icons: ['glass', 'space', 'infinity', 'taxi']
 }).then(
-	res => {
-		fs.wrireFile(res.output_path, res.css, err => console.log(err))
-	},
-	err => console.log(err)
+    res => {
+        fs.wrireFile(res.output_path, res.css, err => console.log(err))
+    },
+    err => console.log(err)
 )
 ```
 

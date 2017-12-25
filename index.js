@@ -23,8 +23,10 @@ const fs        = require('fs'),
             return crop(config).then(
                 css => {
                     if (module.parent) {
-                        let css_dest = config.css_dest
-                        return { css, css_dest }
+                        return { 
+                            css, 
+                            css_dest: config.css_dest
+                        }
                     } else {
                         fs.writeFile(config.css_dest, css, err => 
                             err 
